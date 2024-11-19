@@ -18,11 +18,11 @@ pipeline {
                 echo 'Testing version ${parameters.VERSION}'
                 sh './gradlew test'
             }
-            //post {
-            //    always {
-            //        junit "build/reports/tests/**/*.html"
-            //    }
-            //}
+            post {
+                always {
+                    junit "build/reports/tests/**/*.html"
+                }
+            }
         }
     }
 }
