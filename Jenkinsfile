@@ -22,7 +22,7 @@ pipeline {
                 always {
                     //junit "build/reports/tests/**/*.html"
                     publishHTML{
-                        reportDir: 'build/reports/tests/**',
+                        reportDir: 'build/reports/tests/test',
                         reportFiles: 'index.html'
                         reportName: 'Test Report'
                     }
